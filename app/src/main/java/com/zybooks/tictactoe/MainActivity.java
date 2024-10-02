@@ -1,5 +1,10 @@
 package com.zybooks.tictactoe;
 
+//Group project
+//ISYS 221 VL1
+//Michelle Beckett
+//Tyler Ranshaw
+
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
