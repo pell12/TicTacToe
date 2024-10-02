@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
         android:text="Tic Tac  Toe"
+        android:textColor="#2196F3"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
