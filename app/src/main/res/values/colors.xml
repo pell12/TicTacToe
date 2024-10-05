@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Colors for Game -->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorButton">#FFFFFF</color>
+    <color name="colorButtonText">#000000</color>
+    <color name="colorButtonDisabled">#CCCCCC</color>
+    <color name="colorStatusTextk">#333333</color>
 </resources>
