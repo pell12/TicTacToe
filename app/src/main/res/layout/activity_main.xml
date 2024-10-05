@@ -129,3 +129,76 @@
         android:text="Turn: X"
         android:textSize="18sp" />
 </LinearLayout>
+
+<!-- Here is my revised code which helps apply the color palette -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar  -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- GridLayout -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/button00"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button01"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button02"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button10"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button11"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button12"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button20"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button21"
+            style="@style/CustomButton" />
+        <Button
+            android:id="@+id/button22"
+            style="@style/CustomButton" />
+    </GridLayout>
+
+    <!-- Text displaying turns -->
+    <TextView
+        android:id="@+id/status"
+        style="@style/CustomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="16dp"
+        android:text="Turn: X" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
