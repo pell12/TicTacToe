@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,28 +9,31 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#6200EE"
+        android:background="@android:color/darker_gray"
         android:titleTextColor="#FFFFFF" />
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
+        android:background="@drawable/halloween"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:rowCount="3"
         android:columnCount="3"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:rowCount="3">
 
         <Button
             android:id="@+id/button00"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp"
+            app:iconPadding="20dp" />
 
 
         <Button
@@ -38,10 +42,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button02"
@@ -49,10 +53,11 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textColorLink="#045D5D"
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button10"
@@ -60,10 +65,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button11"
@@ -71,10 +76,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button12"
@@ -82,10 +87,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button20"
@@ -93,10 +98,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button21"
@@ -104,10 +109,10 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textSize="70sp" />
 
         <Button
             android:id="@+id/button22"
@@ -115,10 +120,11 @@
             android:layout_height="0dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:textSize="24sp"
+            android:layout_margin="4dp"
             android:background="#E0E0E0"
             android:textColor="#000000"
-            android:layout_margin="4dp"/>
+            android:textColorLink="#045D5D"
+            android:textSize="70sp" />
     </GridLayout>
 
     <TextView
@@ -126,79 +132,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Turn: X"
-        android:textSize="18sp" />
+        android:text="@string/turn_x"
+        android:textSize="24dp" />
 </LinearLayout>
-
-<!-- Here is my revised code which helps apply the color palette -->
-
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context=".MainActivity">
-
-    <!-- Toolbar  -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-    <!-- GridLayout -->
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="3"
-        android:rowCount="3"
-        android:layout_gravity="center_horizontal">
-
-        <!-- Buttons -->
-        <Button
-            android:id="@+id/button00"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button01"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button02"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button10"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button11"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button12"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button20"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button21"
-            style="@style/CustomButton" />
-        <Button
-            android:id="@+id/button22"
-            style="@style/CustomButton" />
-    </GridLayout>
-
-    <!-- Text displaying turns -->
-    <TextView
-        android:id="@+id/status"
-        style="@style/CustomTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="16dp"
-        android:text="Turn: X" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
